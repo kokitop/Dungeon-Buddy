@@ -147,8 +147,8 @@ module.exports = {
         }
 
         function getConfirmCancelRow() {
-            const confirmSuccess = new ButtonBuilder().setLabel("Create Group").setCustomId("confirm").setStyle(3);
-            const confirmCancel = new ButtonBuilder().setLabel("Cancel").setCustomId("cancel").setStyle(4);
+            const confirmSuccess = new ButtonBuilder().setLabel("Crear Grupo").setCustomId("confirm").setStyle(3);
+            const confirmCancel = new ButtonBuilder().setLabel("Cancelar").setCustomId("cancel").setStyle(4);
 
             const confirmCancelRow = new ActionRowBuilder().addComponents(confirmSuccess, confirmCancel);
             return confirmCancelRow;
