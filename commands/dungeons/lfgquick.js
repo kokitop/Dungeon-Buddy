@@ -193,7 +193,7 @@ module.exports = {
 
             // Reply to the interaction first then send the embed which catches any errors
             await interaction.reply({
-                content: `**Please ensure applying members are __from NoP__ and __use the passphrase__ in-game!**\nThe passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\``,
+                content: `**Please ensure applying members are __from SP__ and __use the passphrase__ in-game!**\nThe passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\``,
                 ephemeral: true,
             });
 

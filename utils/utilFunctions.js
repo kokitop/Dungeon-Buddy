@@ -71,7 +71,7 @@ function generateListedAsString(dungeon) {
     const dungeonAcronym = dungeonData[dungeon].acronym;
     const randomLetterPair = generateRandomLetterPair();
 
-    return `NoP ${dungeonAcronym} ${randomLetterPair}`;
+    return `SP ${dungeonAcronym} ${randomLetterPair}`;
 }
 
 function generatePassphrase(wordList, wordCount = 3) {
@@ -95,15 +95,15 @@ function parseRolesToTag(difficulty, requiredComposition, guildId) {
     let roleDifficultyString = "";
 
     if (difficulty == "M0") {
-        roleDifficultyString = "-M0";
+        roleDifficultyString = "-m0";
     } else if (difficulty < 4) {
-        roleDifficultyString = "-M2-3";
+        roleDifficultyString = "-m2-3";
     } else if (difficulty < 7) {
-        roleDifficultyString = "-M4-6";
+        roleDifficultyString = "-m4-6";
     } else if (difficulty < 10) {
-        roleDifficultyString = "-M7-9";
+        roleDifficultyString = "-m7-9";
     } else {
-        roleDifficultyString = "-M10";
+        roleDifficultyString = "-m10";
     }
 
     const globalRoles = global.roleMap.get(guildId);
