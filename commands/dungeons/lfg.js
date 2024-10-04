@@ -147,8 +147,8 @@ module.exports = {
         }
 
         function getConfirmCancelRow() {
-            const confirmSuccess = new ButtonBuilder().setLabel("Create Group").setCustomId("confirm").setStyle(3);
-            const confirmCancel = new ButtonBuilder().setLabel("Cancel").setCustomId("cancel").setStyle(4);
+            const confirmSuccess = new ButtonBuilder().setLabel("Crear Grupo").setCustomId("confirm").setStyle(3);
+            const confirmCancel = new ButtonBuilder().setLabel("Cancelar").setCustomId("cancel").setStyle(4);
 
             const confirmCancelRow = new ActionRowBuilder().addComponents(confirmSuccess, confirmCancel);
             return confirmCancelRow;
@@ -275,13 +275,13 @@ module.exports = {
                     // With a unique message for each missing option in order of priority
                     let messageContentMissing = messageContent;
                     if (!dungeonDifficulty) {
-                        messageContentMissing += "\n**Please select a difficulty.**";
+                        messageContentMissing += "\n**Selecciona nivel.**";
                     } else if (!timeOrCompletion) {
-                        messageContentMissing += "\n**Please select time/completion.**";
+                        messageContentMissing += "\n**Timear o Completarla?**";
                     } else if (!userChosenRole) {
-                        messageContentMissing += "\n**Please select your role.**";
+                        messageContentMissing += "\n**Selecciona tu rol.**";
                     } else if (!dungeonComposition) {
-                        messageContentMissing += "\n**Please select required roles.**";
+                        messageContentMissing += "\n**Selecciona tu roles requeridos.**";
                     }
 
                     if (!dungeonDifficulty || !timeOrCompletion || !userChosenRole || !dungeonComposition) {
@@ -335,7 +335,7 @@ module.exports = {
                         });
 
                         await i.update({
-                            content: `**Por favor asegurate que la gente que se apunta son __from SP__ y __usan la frase secreta__ en el juego!**\nLa frase secreta para la dungeon es: \`${mainObject.utils.passphrase.phrase}\``,
+                            content: `**Por favor asegurate que la gente que se apunta son __usuarios de Sin Presion__ y __usan la frase secreta__ en el juego!**\nLa frase secreta para la dungeon es: \`${mainObject.utils.passphrase.phrase}\``,
                             components: [],
                         });
 

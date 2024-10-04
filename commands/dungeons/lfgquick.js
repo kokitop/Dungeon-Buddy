@@ -10,7 +10,7 @@ const { processError } = require("../../utils/errorHandling");
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("lfgquick")
-        .setDescription("Use the quick command to find a group for your key.")
+        .setDescription("Usa el comando lfgquick para encontrar un grupo para tu llave.")
         .addStringOption((option) =>
             option
                 .setName("quick_dungeon_string")
@@ -193,7 +193,7 @@ module.exports = {
 
             // Reply to the interaction first then send the embed which catches any errors
             await interaction.reply({
-                content: `**Please ensure applying members are __from SP__ and __use the passphrase__ in-game!**\nThe passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\``,
+                content: `**Por favor asegurate que la gente que se apunta son __from SP__ y __usan la frase secreta__ en el juego!**\nLa frase secreta para la dungeon es: \`${mainObject.utils.passphrase.phrase}\``,
                 ephemeral: true,
             });
 

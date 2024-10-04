@@ -12,14 +12,14 @@ function getEligibleComposition(mainObject) {
     if (!mainObject.interactionUser.userChosenRole) {
         const selectComposition = new StringSelectMenuBuilder()
             .setCustomId("composition")
-            .setPlaceholder("What roles are you looking for?")
+            .setPlaceholder("Que roles necesitas en el grupo? Seleccionalos todos")
             .setMinValues(1)
             .addOptions(new StringSelectMenuOptionBuilder().setLabel("Choose your role first!").setValue("none"));
         return selectComposition;
     }
     const selectComposition = new StringSelectMenuBuilder()
         .setCustomId("composition")
-        .setPlaceholder("What roles are you looking for?")
+        .setPlaceholder("Que roles necesitas en el grupo? Seleccionalos todos")
         .setMinValues(1)
         .setMaxValues(4);
 
