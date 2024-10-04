@@ -28,7 +28,7 @@ module.exports = {
         .addStringOption((option) =>
             option
                 .setName("listed_as")
-                .setDescription("Specify a listed as name for your dungeon. Otherwise one will be generated for you.")
+                .setDescription("Que nombre le vas poner a tu grupo en el buscador de dungeons del WOW, asi será más fácil encontraros.")
                 .setRequired(false)
         )
         .addStringOption((option) =>
