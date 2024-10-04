@@ -28,13 +28,13 @@ module.exports = {
         .addStringOption((option) =>
             option
                 .setName("listed_as")
-                .setDescription("Que nombre le vas poner a tu grupo en el buscador de dungeons del WOW, asi será más fácil encontraros.")
+                .setDescription("Nombre de tu grupo en el buscador de dungeons del WOW.")
                 .setRequired(false)
         )
         .addStringOption((option) =>
             option
                 .setName("creator_notes")
-                .setDescription("Añade información sobre tu gruppo")
+                .setDescription("Añade información sobre tu grupo")
                 .setRequired(false)
         ),
     async execute(interaction) {

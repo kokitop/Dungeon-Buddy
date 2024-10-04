@@ -47,7 +47,7 @@ async function processSendEmbedError(error, reason, userId) {
 let deleteTimeouts = new Map();
 
 async function createStatusEmbed(statusMessage, embedMessage) {
-    const contactMessage = `\nPlease try /lfg again if you wish to create a group.`;
+    const contactMessage = `\nUsa /lfg si quieres volver a crear el grupo.`;
 
     await embedMessage
         .edit({
