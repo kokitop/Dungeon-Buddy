@@ -11,7 +11,7 @@ function stripListedAsNumbers(listedAs) {
 }
 
 const filterSpots = (spots, interactionUserId) => {
-    return spots.filter((member) => member !== interactionUserId && !member.includes("~~Filled Spot"));
+    return spots.filter((member) => member !== interactionUserId && !member.includes("~~Rol Cubierto"));
 };
 
 async function sendCancelMessage(channel, mainObject, message) {
@@ -121,7 +121,7 @@ function parseRolesToTag(difficulty, requiredComposition, guildId) {
 
 async function sendPassphraseToUser(interaction, mainObject) {
     await interaction.followUp({
-        content: `The passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\`\nAdd this to your note when applying to \`${mainObject.embedData.listedAs}\` in-game!`,
+        content: `La frase secreta para la dungeon es: \`${mainObject.utils.passphrase.phrase}\`\nGuardate esta frase ara cuando te unas al grupop de \`${mainObject.embedData.listedAs}\` en el juego!`,
         ephemeral: true,
     });
 }

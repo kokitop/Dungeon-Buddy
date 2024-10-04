@@ -49,7 +49,7 @@ function getMainObject(interaction) {
             timeOrCompletion: "",
             listedAs: "",
             spotIcons: [],
-            filledSpot: "~~Filled Spot~~",
+            filledSpot: "~~Rol Cubierto~~",
             filledSpotCounter: 0,
             rolesToTag: "",
         },

@@ -106,8 +106,8 @@ module.exports = {
                 .setMinValues(1)
                 .setMaxValues(1)
                 .addOptions(
-                    new StringSelectMenuOptionBuilder().setLabel("Time").setValue("Time"),
-                    new StringSelectMenuOptionBuilder().setLabel("Completion").setValue("Completion")
+                    new StringSelectMenuOptionBuilder().setLabel("Timear").setValue("Timear"),
+                    new StringSelectMenuOptionBuilder().setLabel("Completar").setValue("Completar")
                 );
 
             const timeCompletionRow = new ActionRowBuilder().addComponents(getTimeCompletion);

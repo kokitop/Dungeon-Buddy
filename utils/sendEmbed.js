@@ -124,9 +124,9 @@ async function sendEmbed(mainObject, channel, requiredCompositionList) {
             } else {
                 let contentMessage;
                 if (discordUserId === interactionUserId) {
-                    contentMessage = `The passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\`\nLook out for SP members applying with this in-game!`;
+                    contentMessage = `La frase secreta para la dungeon es: \`${mainObject.utils.passphrase.phrase}\`\nAsegurate que los jugadores son miembros de Sin Presion con esta frase ingame!`;
                 } else {
-                    contentMessage = `The passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\`\nAdd this to your note when applying to \`${mainObject.embedData.listedAs}\` in-game!`;
+                    contentMessage = `La frase secreta para la dungeon es: \`${mainObject.utils.passphrase.phrase}\`\nGuardate esta frase cuando te unas a \`${mainObject.embedData.listedAs}\` en el juego!`;
                 }
                 await i.reply({
                     content: contentMessage,
