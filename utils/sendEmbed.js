@@ -124,7 +124,7 @@ async function sendEmbed(mainObject, channel, requiredCompositionList) {
             } else {
                 let contentMessage;
                 if (discordUserId === interactionUserId) {
-                    contentMessage = `The passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\`\nLook out for NoP members applying with this in-game!`;
+                    contentMessage = `The passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\`\nLook out for SP members applying with this in-game!`;
                 } else {
                     contentMessage = `The passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\`\nAdd this to your note when applying to \`${mainObject.embedData.listedAs}\` in-game!`;
                 }
