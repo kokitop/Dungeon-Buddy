@@ -123,7 +123,7 @@ function getDungeonObject(dungeon, difficulty, mainObject) {
         color: 0x3c424b,
         title: `${listedAs}  ${joinedRoleIcons}`,
         fields: fields,
-        footer: { text: "/lfghelp for more info about Dungeon Buddy" },
+        footer: { text: "/lfghelp para mas ayuda en la creación de grupos" },
         status: "inProgress",
         spots: roleIcons.length,
     };
