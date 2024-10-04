@@ -17,11 +17,11 @@ const { processError, createStatusEmbed } = require("../../utils/errorHandling")
 module.exports = {
     data: new SlashCommandBuilder()
         .setName("lfg")
-        .setDescription("Post a message to find a group for your key.")
+        .setDescription("Pone un mensaje para encontrar a gente para la dungeon")
         .addStringOption((option) =>
             option
                 .setName("dungeon")
-                .setDescription("Select a dungeon to run.")
+                .setDescription("Selección la dungeon a hacer")
                 .setRequired(true)
                 .addChoices(...dungeonList.map((dungeon) => ({ name: dungeon, value: dungeon })))
         )
@@ -34,7 +34,7 @@ module.exports = {
         .addStringOption((option) =>
             option
                 .setName("creator_notes")
-                .setDescription("Add some additional information about your group.")
+                .setDescription("Añade información sobre tu gruppo")
                 .setRequired(false)
         ),
     async execute(interaction) {
@@ -170,10 +170,10 @@ module.exports = {
         }
 
         // Temporary storage for dropdown values
-        let dungeonDifficultyPlaceholder = "Select a difficulty";
-        let timeOrCompletionPlaceholder = "Time/Completion?";
-        let userChosenRolePlaceholder = "Select your role";
-        let dungeonCompositionPlaceholder = "Select your composition";
+        let dungeonDifficultyPlaceholder = "Selecciona nivel";
+        let timeOrCompletionPlaceholder = "Timear o Completarla?";
+        let userChosenRolePlaceholder = "Selecciona tu rol";
+        let dungeonCompositionPlaceholder = "Selecciona la composición del grupo";
 
         async function updateRows(
             i,
@@ -207,7 +207,7 @@ module.exports = {
                 dungeonCompositionPlaceholder
             );
 
-            let messageContent = `You are creating a group for ${dungeonToRun}.`;
+            let messageContent = `Estas creando un grupo para ${dungeonToRun}.`;
             const dungeonResponse = await interaction.reply({
                 content: messageContent,
                 ephemeral: true,
@@ -335,7 +335,7 @@ module.exports = {
                         });
 
                         await i.update({
-                            content: `**Please ensure applying members are __from SP__ and __use the passphrase__ in-game!**\nThe passphrase for the dungeon is: \`${mainObject.utils.passphrase.phrase}\``,
+                            content: `**Por favor asegurate que la gente que se apunta son __from SP__ y __usan la frase secreta__ en el juego!**\nLa frase secreta para la dungeon es: \`${mainObject.utils.passphrase.phrase}\``,
                             components: [],
                         });
 
@@ -359,7 +359,7 @@ module.exports = {
             dungeonCollector.on("end", async (collected, reason) => {
                 if (reason === "time") {
                     await dungeonResponse.edit({
-                        content: "LFG timed out! Please use /lfg again to create a new group.",
+                        content: "Se acabo el tiemppo, usa /lfg para iniciar el grupo otra vez.",
                         components: [],
                     });
 
@@ -370,7 +370,7 @@ module.exports = {
                         command_used: "lfg",
                     });
                 } else if (reason === "cancelled") {
-                    await createStatusEmbed("LFG cancelled by the user.", dungeonResponse);
+                    await createStatusEmbed("LFG cancelado.", dungeonResponse);
 
                     interactionStatusTable.create({
                         interaction_id: interaction.id,
